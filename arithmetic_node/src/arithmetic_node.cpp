@@ -68,6 +68,8 @@ void sentMsgCallback(const message_ui::sent_msg::ConstPtr& msg) {
     } catch (...) {
       return;
     }
+  } else {
+    return;
   }
 
   double time_answered = ros::Time::now().toSec();
