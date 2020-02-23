@@ -27,6 +27,8 @@ void sentMsgCallback(const message_ui::sent_msg::ConstPtr& msg) {
     reply_string = std::string("My name is MRSD Siri");
   } else if (msg_content.compare(QUESTION_3) == 0) {
 	reply_string = std::string("I am fine, thank you.");
+  } else {
+    return;
   }
 
   chatbot_node::reply_msg new_msg;
